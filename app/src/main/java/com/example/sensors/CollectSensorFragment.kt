@@ -71,10 +71,8 @@
 	
 	override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
 			super.onActivityResult(requestCode, resultCode, data)
-			if (requestCode == permissionRequestCode) {
-				if (resultCode == Activity.RESULT_CANCELED) {
+			if (requestCode == permissionRequestCode && resultCode == Activity.RESULT_CANCELED) {
 					Toast.makeText(requireContext(), "Steps can't count!", Toast.LENGTH_SHORT).show()
-				}
 			}
 		}
 	
