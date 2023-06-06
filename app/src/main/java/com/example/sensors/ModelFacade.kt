@@ -64,7 +64,7 @@ var res = ""
 		    output[i] = outputVal.float
 		}
 
-	    res = getSortedResult(output, labelsList).get(0).toString()
+	    res = getSortedResult(output, labelsList)[0].toString()
         return res
     }
     
@@ -96,7 +96,7 @@ var res = ""
 		    val recognitions = ArrayList<Recognition>()
 		    val recognitionsSize = Math.min(pq.size, labelList.size)
 		    
-		    if (pq.size != 0) {
+		    if (pq.isNotEmpty()) {
 		       for (i in 0 until recognitionsSize) {
 		           recognitions.add(pq.poll())
 		       }
